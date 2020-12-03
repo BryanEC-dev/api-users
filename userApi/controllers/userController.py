@@ -1,15 +1,23 @@
 from flask import jsonify
-
+import logging
 from userApi.repository import userRepository
+
+LOG_FILENAME = 'logging.log'
+logging.basicConfig(
+    filename=LOG_FILENAME,
+    level=logging.DEBUG,
+    format='%(asctime)s:MODULE:%(module)s:FUNCTION:%(funcName)s:%(levelname)s:%(message)s:'
+)
 
 
 def get_user():
+    logging.info("Consulta de todos los usuarios de la base de datos.")
     response = {}
     user = []
-
     try:
         list_user = userRepository.get_user()
         if list_user:
+            logging.info("Existen usuarios en la base de datos.")
             for Users in list_user:
                 user.append({
                     "_id": str(Users["_id"]),
@@ -29,23 +37,26 @@ def get_user():
         else:
             response["status"] = "200"
             response["message"] = "No existen registros"
+            logging.info("No existen registros.")
         return response
-    except:
+    except Exception as inst:
         response = jsonify({
             'message': 'Internal Error',
             'status': 500
         })
         response.status_code = 500
+        logging.ERROR(str(inst))
         return response
 
 
 def get_user_identification(identification):
+    logging.info("Consulta de usuarios por cedula")
     response = {}
 
     try:
         information_user = userRepository.get_user_identification(identification)
-
         if information_user:
+            logging.info("Existe un usuario con la identificación solicitada.")
             user = {
                 "_id": str(information_user["_id"]),
                 "identification_card": information_user["identification_card"],
@@ -63,17 +74,19 @@ def get_user_identification(identification):
             response["status"] = "200"
             response["message"] = "successful "
             response["users"] = user
+            logging.info("No existen registros.")
         else:
             response["status"] = "200"
             response["message"] = "No existen registros"
 
         return response
-    except:
+    except Exception as inst:
         response = jsonify({
             'message': 'Internal Error',
             'status': 500
         })
         response.status_code = 500
+        logging.ERROR(str(inst))
         return response
 
 

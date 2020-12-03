@@ -6,7 +6,7 @@ info:
 servers:
 
   - description: Servidor local
-    url: http://localhost:5000/rest/v1.0/userApi
+    url: http://localhost:5000/ms/v1.0/userApi
 
 tags:
 - name: users

@@ -2,9 +2,13 @@ from flask import Flask, request, jsonify
 from flask_pymongo import PyMongo
 from flask_swagger_ui import get_swaggerui_blueprint
 from userApi.routes import userRoutes
+from flask_cors import CORS
+
 import json
 
+
 app = Flask(__name__)
+CORS(app)
 
 with open('config.json', 'r') as file:
     config = json.load(file)
