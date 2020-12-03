@@ -12,9 +12,9 @@
 
     "PRODUCTION": {
         "MONGO_URL": "mongodb+srv://admin:4tVhKMMgf7h3wXaZ@cluster0.wcfmn.mongodb.net/apiusers?retryWrites=true&w=majority",
-        "HOST" : "127.0.0.1",
+        "HOST" : "https://user-api-bryan.herokuapp.com/",
         "PORT" : "5000",
-        "DEBUG" : "True",
+        "DEBUG" : "False",
         "GLOBAL_PATH" : "/ms/v1.0/userApi",
         "SWAGGER_URL" : "/swagger",
         "API_URL" : "/static/swagger.yml"
