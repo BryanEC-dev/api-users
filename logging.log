@@ -125,3 +125,19 @@ INFO:werkzeug: * Detected change in 'C:\\Users\\bryan\\PycharmProjects\\userApi2
 2020-12-03 04:07:31,733:MODULE:_internal:FUNCTION:_log:INFO:127.0.0.1 - - [03/Dec/2020 04:07:31] "[37mGET /swagger/swagger-ui.css.map HTTP/1.1[0m" 200 -:
 2020-12-03 04:07:31,906:MODULE:_internal:FUNCTION:_log:INFO:127.0.0.1 - - [03/Dec/2020 04:07:31] "[37mGET /swagger/swagger-ui-standalone-preset.js.map HTTP/1.1[0m" 200 -:
 2020-12-03 04:07:31,913:MODULE:_internal:FUNCTION:_log:INFO:127.0.0.1 - - [03/Dec/2020 04:07:31] "[37mGET /swagger/swagger-ui-bundle.js.map HTTP/1.1[0m" 200 -:
+2020-12-03 04:08:24,861:MODULE:_internal:FUNCTION:_log:INFO:127.0.0.1 - - [03/Dec/2020 04:08:24] "[37mGET /swagger/ HTTP/1.1[0m" 200 -:
+2020-12-03 04:08:24,998:MODULE:_internal:FUNCTION:_log:INFO:127.0.0.1 - - [03/Dec/2020 04:08:24] "[37mGET /swagger/swagger-ui.css HTTP/1.1[0m" 200 -:
+2020-12-03 04:08:25,055:MODULE:_internal:FUNCTION:_log:INFO:127.0.0.1 - - [03/Dec/2020 04:08:25] "[37mGET /swagger/swagger-ui-bundle.js HTTP/1.1[0m" 200 -:
+2020-12-03 04:08:25,118:MODULE:_internal:FUNCTION:_log:INFO:127.0.0.1 - - [03/Dec/2020 04:08:25] "[37mGET /swagger/swagger-ui-standalone-preset.js HTTP/1.1[0m" 200 -:
+2020-12-03 04:08:25,532:MODULE:_internal:FUNCTION:_log:INFO:127.0.0.1 - - [03/Dec/2020 04:08:25] "[37mGET /swagger/swagger-ui.css.map HTTP/1.1[0m" 200 -:
+2020-12-03 04:08:25,900:MODULE:_internal:FUNCTION:_log:INFO:127.0.0.1 - - [03/Dec/2020 04:08:25] "[37mGET /swagger/swagger-ui-bundle.js.map HTTP/1.1[0m" 200 -:
+2020-12-03 04:08:25,907:MODULE:_internal:FUNCTION:_log:INFO:127.0.0.1 - - [03/Dec/2020 04:08:25] "[37mGET /swagger/swagger-ui-standalone-preset.js.map HTTP/1.1[0m" 200 -:
+2020-12-03 04:08:26,372:MODULE:_internal:FUNCTION:_log:INFO:127.0.0.1 - - [03/Dec/2020 04:08:26] "[37mGET /static/swagger.yml HTTP/1.1[0m" 200 -:
+2020-12-03 04:08:26,568:MODULE:_internal:FUNCTION:_log:INFO:127.0.0.1 - - [03/Dec/2020 04:08:26] "[37mGET /swagger/favicon-32x32.png HTTP/1.1[0m" 200 -:
+2020-12-03 04:08:35,602:MODULE:userController:FUNCTION:get_user:INFO:Consulta de todos los usuarios de la base de datos.:
+2020-12-03 04:08:36,148:MODULE:userController:FUNCTION:get_user:INFO:Existen usuarios en la base de datos.:
+2020-12-03 04:08:38,144:MODULE:_internal:FUNCTION:_log:INFO:127.0.0.1 - - [03/Dec/2020 04:08:38] "[37mGET /ms/v1.0/userApi/users HTTP/1.1[0m" 200 -:
+2020-12-03 04:09:09,981:MODULE:userController:FUNCTION:get_user_identification:INFO:Consulta de usuarios por cedula:
+2020-12-03 04:09:10,076:MODULE:userController:FUNCTION:get_user_identification:INFO:Existe un usuario con la identificación solicitada.:
+2020-12-03 04:09:10,077:MODULE:userController:FUNCTION:get_user_identification:INFO:No existen registros.:
+2020-12-03 04:09:10,078:MODULE:_internal:FUNCTION:_log:INFO:127.0.0.1 - - [03/Dec/2020 04:09:10] "[37mGET /ms/v1.0/userApi/users/findByIdentificationCard/0952013225 HTTP/1.1[0m" 200 -:
