@@ -8,6 +8,9 @@ servers:
   - description: Servidor local
     url: http://localhost:5000/ms/v1.0/userApi
 
+  - description: Servidor produccion
+    url: https://user-api-bryan.herokuapp.com/ms/v1.0/userApi
+
 tags:
 - name: users
   description: User consultation services
