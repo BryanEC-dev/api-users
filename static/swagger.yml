@@ -1,0 +1,82 @@
+openapi: 3.0.1
+info:
+  version: '1'
+  title: 'UserApi'
+  description: 'MicroService for user consultation'
+servers:
+
+  - description: Servidor local
+    url: http://localhost:5000/rest/v1.0/userApi
+
+tags:
+- name: users
+  description: User consultation services
+paths:
+  /users:
+    get:
+      tags:
+      - User
+      summary: List of all users
+      responses:
+        200:
+          description: Successful
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResponseUser'
+  /users/findByIdentificationCard/{identification}:
+    get:
+      tags:
+      - User
+      summary: User information
+      parameters:
+      - name: identification
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        200:
+          description: Successful
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResponseUser'
+components:
+  schemas:
+    ResponseUser:
+      type: object
+      properties:
+        status:
+          type: number
+        message:
+          type: string
+        user:
+          type: array
+          items:
+            $ref: '#/components/schemas/User'
+    User:
+      type: object
+      properties:
+        id:
+          type: string
+        identification_card:
+          type: string
+        first_last_name:
+          type: string
+        second_last_name:
+          type: string
+        firs_name:
+          type: string
+        middle_name:
+          type: string
+        date_birth:
+          type: string
+        ubication:
+          type: string
+        nationality:
+          type: string
+        sex:
+          type: string
+        civil_state:
+          type: string
